@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import logoImg from "./assets/logo.png"; // place your logo image in src/assets
+import logoImg from "./logo.png"; // make sure logo.png is in src/
 
 function App() {
   const [page, setPage] = useState("home");
@@ -12,9 +12,13 @@ function App() {
           <div className="page-content">
             <h2>About Us</h2>
             <p>
-              The Open Roots Initiative is a community-driven sustainability education program.
-              We empower youth and communities to build practical environmental literacy through
-              hands-on, collaborative learning.
+              The Open Roots Initiative is a free, hands-on sustainability
+              education program that combines gardening, basic science, and
+              renewable energy engineering to serve youth and communities. We
+              create accessible learning gardens where participants—primarily
+              children and young people, but open to all ages—learn through
+              direct experience: touching soil, building wind turbines, tracing
+              water cycles, and harvesting food they can take home.
             </p>
           </div>
         );
@@ -26,22 +30,38 @@ function App() {
 
             <div className="card">
               <h3>Module 1: The Living Soil</h3>
-              <p>Biology + Chemistry • Composting • Carbon Cycle • Worm Bins • Take-home: Small bag of compost</p>
+              <p>
+                Biology + Chemistry • Composting • Carbon Cycle • Worm Bins
+                <br />
+                Take-home: Small bag of compost
+              </p>
             </div>
 
             <div className="card">
               <h3>Module 2: The Water Journey</h3>
-              <p>Hydrology • Irrigation Testing • Solar Stills • Take-home: Illustrated water cycle card</p>
+              <p>
+                Hydrology • Irrigation Testing • Solar Stills
+                <br />
+                Take-home: Illustrated water cycle card
+              </p>
             </div>
 
             <div className="card">
               <h3>Module 3: The Energy Shift</h3>
-              <p>Wind Turbines • Solar Ovens • Renewable Engineering • Capstone: Assemble wind-powered water pump</p>
+              <p>
+                Wind Turbines • Solar Ovens • Renewable Engineering
+                <br />
+                Take-home: Mini blade kit, Certificate of Completion
+              </p>
             </div>
 
             <div className="card">
               <h3>Module 4: The Food Connection</h3>
-              <p>Nutrition • Food Systems • Seed Saving • Garden Harvest • Take-home: Fresh vegetables, seed packet</p>
+              <p>
+                Nutrition • Food Systems • Seed Saving • Garden Harvest
+                <br />
+                Take-home: Fresh vegetables, seed packet
+              </p>
             </div>
           </div>
         );
@@ -52,14 +72,15 @@ function App() {
             <h2>Get Involved</h2>
             <div className="card">
               <h3>Volunteer With Us</h3>
-              <p>Support workshops, mentor students, and help expand our reach.</p>
+              <p>
+                Support workshops, mentor students, and help expand our reach.
+              </p>
             </div>
-
             <div className="card">
               <h3>Community Partnerships</h3>
               <p>
-                Schools, local organizations, and families can collaborate to bring sustainability
-                education to their communities.
+                Schools, local organizations, and families can collaborate to
+                bring sustainability education to their communities.
               </p>
             </div>
           </div>
@@ -70,8 +91,9 @@ function App() {
           <div className="page-content">
             <h2>Sponsorship & Funding</h2>
             <p>
-              Your support helps provide materials, build tools, and expand access to environmental
-              education. We welcome grant partners, sponsors, and community investors.
+              Your support helps provide materials, build tools, and expand
+              access to environmental education. We welcome grant partners,
+              sponsors, and community investors.
             </p>
           </div>
         );
@@ -80,9 +102,15 @@ function App() {
         return (
           <div className="page-content">
             <h2>Frequently Asked Questions</h2>
-            <p><strong>Who can participate?</strong> Students, families, schools.</p>
-            <p><strong>Do I need experience?</strong> No experience required.</p>
-            <p><strong>How do I join?</strong> Contact us below.</p>
+            <p>
+              <strong>Who can participate?</strong> Students, families, schools.
+            </p>
+            <p>
+              <strong>Do I need experience?</strong> No experience required.
+            </p>
+            <p>
+              <strong>How do I join?</strong> Contact us below.
+            </p>
           </div>
         );
 
@@ -98,33 +126,24 @@ function App() {
 
       default:
         return (
-          <div className="page-content">
+          <>
             <section className="hero">
-              <img
-                src={logoImg}
-                alt="The Open Roots Initiative Logo"
-                className="hero-logo"
-                onClick={() => setPage("home")}
-              />
-              <h1>The Open Roots Initiative</h1>
-              <p>
-                The Open Roots Initiative is a free, hands-on sustainability education program
-                combining gardening, basic science, and renewable energy engineering to serve youth
-                and communities. We create accessible learning gardens where participants, primarily
-                children and young people, learn by touching soil, building wind turbines, tracing
-                water cycles, and harvesting food they can take home.
-              </p>
-              <p>
-                <strong>Mission:</strong> Free, accessible, hands-on education that builds community,
-                empowers youth, and creates a network of learning gardens where anyone can explore
-                sustainability first-hand.
-              </p>
-              <button onClick={() => setPage("getinvolved")}>
-                Get Involved
-              </button>
+              <img src={logoImg} alt="Open Roots Initiative Logo" className="hero-logo" />
+              <div className="hero-content">
+                <h1>The Open Roots Initiative</h1>
+                <p>
+                  The Open Roots Initiative is a free, hands-on sustainability
+                  education program for youth and communities. Participants
+                  learn by planting, building, and experimenting with soil,
+                  water, energy, and food systems. Our mission: to make
+                  sustainability education tangible, accessible, and
+                  community-driven.
+                </p>
+                <button onClick={() => setPage("getinvolved")}>Get Involved</button>
+              </div>
             </section>
 
-            <section className="section">
+            <section className="page-content">
               <h2>Our Focus Areas</h2>
               <div className="grid">
                 <div className="card">🌱 Soil & Ecology</div>
@@ -133,7 +152,7 @@ function App() {
                 <div className="card">🥕 Food & Nutrition</div>
               </div>
             </section>
-          </div>
+          </>
         );
     }
   };
@@ -143,10 +162,9 @@ function App() {
       <header className="navbar">
         <div className="nav-inner">
           <div className="logo" onClick={() => setPage("home")}>
-            <div className="logo-circle">🌿</div>
+            <img src={logoImg} alt="Logo" className="logo-image" />
             <span>The Open Roots Initiative</span>
           </div>
-
           <nav>
             <button onClick={() => setPage("about")}>About</button>
             <button onClick={() => setPage("curriculum")}>Curriculum</button>
@@ -168,5 +186,8 @@ function App() {
 }
 
 export default App;
+
+
+
 
 
