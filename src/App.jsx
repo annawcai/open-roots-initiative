@@ -128,30 +128,29 @@ function App() {
 
       default:
         return (
-          <div className="page-container">
-            <section className="hero">
-              <div className="hero-content">
-                <h1>Open Roots Initiative</h1>
-                <p>
-                  Growing community resilience through hands-on sustainability education.
-                </p>
-                <button onClick={() => setPage("getinvolved")}>
-                  Get Involved
-                </button>
-              </div>
-            </section>
+    <>
+          <section className="hero">
+            <img src={logoImg} alt="Open Roots Initiative Logo" className="hero-logo" />
+            <h1>Open Roots Initiative</h1>
+            <p>
+              Growing community resilience through hands-on sustainability education.
+            </p>
+            <button onClick={() => setPage("getinvolved")}>
+              Get Involved
+            </button>
+          </section>
 
-            <section className="section">
-              <h2>Our Focus Areas</h2>
-              <div className="grid">
-                <div className="card">🌱 Soil & Ecology</div>
-                <div className="card">💧 Water Systems</div>
-                <div className="card">⚡ Renewable Energy</div>
-                <div className="card">🥕 Food & Nutrition</div>
-              </div>
-            </section>
-          </div>
-        );
+          <section className="section">
+            <h2>Our Focus Areas</h2>
+            <div className="grid">
+              <div className="card">🌱 Soil & Ecology</div>
+              <div className="card">💧 Water Systems</div>
+              <div className="card">⚡ Renewable Energy</div>
+              <div className="card">🥕 Food & Nutrition</div>
+            </div>
+          </section>
+        </>
+      );
     }
   };
 
