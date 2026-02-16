@@ -103,13 +103,15 @@ function App() {
         return (
           <>
             <section className="hero">
-              <h1>Open Roots Initiative</h1>
-              <p>
-                Growing community resilience through hands-on sustainability education.
-              </p>
-              <button onClick={() => setPage("getinvolved")}>
-                Get Involved
-              </button>
+              <div className="hero-content">
+                <h1>Open Roots Initiative</h1>
+                <p>
+                  Growing community resilience through hands-on sustainability education.
+                </p>
+                <button onClick={() => setPage("getinvolved")}>
+                  Get Involved
+                </button>
+              </div>
             </section>
 
             <section className="section">
