@@ -3,8 +3,12 @@
   box-sizing: border-box;
 }
 
-body {
+html,
+body,
+#root {
   margin: 0;
+  padding: 0;
+  height: 100%;
   font-family: Arial, sans-serif;
   background-color: #f4f1e6; /* cream */
   color: #4a3b2a; /* brown */
@@ -13,10 +17,14 @@ body {
 /* WRAPPER */
 .app-wrapper {
   width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* CENTERED CONTAINER */
 .page-container {
+  width: 100%;
   max-width: 1100px;
   margin: 0 auto;
   padding: 20px;
@@ -56,6 +64,12 @@ body {
   margin-right: 10px;
 }
 
+.logo-image {
+  width: 36px;
+  height: 36px;
+  margin-right: 10px;
+}
+
 /* NAV BUTTONS */
 nav {
   display: flex;
@@ -79,12 +93,14 @@ nav button:hover {
 .hero {
   background: linear-gradient(to bottom, #eaf3e6, #f4f1e6);
   padding: 100px 20px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .hero-content {
   max-width: 800px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .hero h1 {
@@ -103,9 +119,10 @@ nav button:hover {
 
 /* MAIN CONTENT */
 .content {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 60px 20px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px 80px;
 }
 
 /* GRID */
@@ -121,7 +138,7 @@ nav button:hover {
   background: white;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 /* FOOTER */
@@ -130,28 +147,6 @@ nav button:hover {
   text-align: center;
   padding: 30px 20px;
   margin-top: 60px;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .nav-inner {
-    flex-direction: column;
-  }
-
-  nav {
-    margin-top: 10px;
-    justify-content: center;
-  }
-
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-}
-
-.logo-image {
-  width: 36px;
-  height: 36px;
-  margin-right: 10px;
 }
 
 /* Newsletter styling */
@@ -181,6 +176,23 @@ nav button:hover {
 .newsletter-card button:hover {
   background: #689864;
 }
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .nav-inner {
+    flex-direction: column;
+  }
+
+  nav {
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
+
 
 
 

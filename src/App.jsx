@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import logoImg from "./logo.png"; // <-- your real logo here
+import logoImg from "./logo.png";
 
 function App() {
   const [page, setPage] = useState("home");
