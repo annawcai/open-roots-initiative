@@ -1,0 +1,18 @@
+Every time you update your website:
+
+1️⃣ Open Terminal
+(Not VS Code editor — the Terminal at the bottom or your system terminal.)
+
+2️⃣ Make sure you're inside your project folder
+If needed:
+cd open-roots-initiative
+You should see src, package.json, etc if you type:
+ls
+
+3️⃣ Then paste:
+git add .
+git commit -m "Updated site"
+git push
+
+Press Enter after each line (or paste all three at once).
+That uploads your changes to GitHub → which triggers Vercel to update your live site
