@@ -1,3 +1,4 @@
+/* RESET */
 * {
   box-sizing: border-box;
 }
@@ -5,25 +6,26 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f4f1e6;
-  color: #4a3b2a;
+  background-color: #f4f1e6; /* cream */
+  color: #4a3b2a; /* brown */
 }
 
-/* MAIN PAGE CONTAINER */
+/* WRAPPER */
 .app-wrapper {
   width: 100%;
 }
 
-/* CENTERED CONTENT WRAPPER */
-.container {
+/* CENTERED CONTAINER */
+.page-container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 20px;
 }
 
 /* NAVBAR */
 .navbar {
-  background: white;
+  width: 100%;
+  background: #ffffff;
   border-bottom: 1px solid #eee;
 }
 
@@ -49,12 +51,12 @@ body {
   border-radius: 50%;
   background: #a9c7a0;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   margin-right: 10px;
 }
 
-/* NAV */
+/* NAV BUTTONS */
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -145,6 +147,42 @@ nav button:hover {
     font-size: 2.2rem;
   }
 }
+
+.logo-image {
+  width: 36px;
+  height: 36px;
+  margin-right: 10px;
+}
+
+/* Newsletter styling */
+.newsletter-card form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.newsletter-card input[type="email"] {
+  padding: 8px 12px;
+  flex: 1;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.newsletter-card button {
+  padding: 8px 16px;
+  background: #7aa874;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.newsletter-card button:hover {
+  background: #689864;
+}
+
+
 
 
 
